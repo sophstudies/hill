@@ -398,7 +398,7 @@ footer {
 footer p.tiny {
   font-size: 0.7rem;
   color: #aaa;
-  text-align: center;
+  text-align: center !important;
   padding: 1rem 0;
   width: 100%;
   display: block;
