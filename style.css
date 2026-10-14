@@ -389,3 +389,9 @@ h3 {
   text-align: left;
   line-height: 1.6;
 }
+.tiny {
+  font-size: 0.7rem;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 0;
+}
