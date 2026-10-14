@@ -1,0 +1,391 @@
+/* Global Setup */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    /* because we want a bright, professional, soft gradient */
+    background: linear-gradient(135deg, #d7eae9 0%, #d6effa 50%, #c9b5d0 100%);
+    background-attachment: fixed;
+    color: #22313f;
+    line-height: 1.6;
+}
+/* The Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;/* logo on left, links on tzhe right */
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;/* Keep menu at top when scroll */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+.nav-logo {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Homebar, the Links-List */
+
+.nav-links {
+    list-style: none;/* removes bullet points */
+    display: flex;/* makes list horizontal */
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #546e7a;
+    font-weight: 500;
+    transition: color 0.3s;/* make hover-color-change smooth */
+}
+
+.nav-links a:hover {
+    color: #00acc1; /* bright turquoise accent */
+}
+.nav-links {
+    list-style: none; /* removes bullet points */
+    display: flex;    /* makes list horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+h1 {
+    color: #1c2f41;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px
+}
+
+p {
+    font-size: 1.0rem;
+    color: #191717;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px
+}
+/* The Main >Hero Section< ("Vita"Introduction) */
+.hero-section {
+    text-align: left;
+    padding: 70px 10%;
+}
+.hero-section p {
+    font-size: 0.8 rem;
+    color: #191717;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-right: 10px
+}
+.hero-section tiny-text {
+    text-align: left;
+    font-size: 0.7rem;
+    font-style: italic; /* use px for exact size or 0.7rem for relative size */
+    color: #544848;     /* Optional: making it lighter often helps small text look better-not a must */
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-family: 'Georgia', serif;
+    text-align: left;
+    color: #392879; /* deep Violet-Blue */
+    margin-bottom: 10px;
+}
+
+.hero-section .subtitle {
+    font-size: 1.4rem;
+    color: #455a64;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* The Professional Card (my own Home Card) */
+.my-card {
+    background: white;
+    position: relative;          /* Bezugsrahmen – ergänzen */
+    max-width: 1000px;
+    margin: 0 auto 50px auto; /*centered for->main focus<- */
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0.05,0.05);
+    border: 1px solid rgba(250, 239, 239, 0.8);
+    text-align: left;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #00acc1;
+}
+.separator {
+    color: #ccc;
+    font-weight: bold;
+}
+
+/* Section Headings (ie "Curriculum Vitae") */
+h2 {
+    font-size: 1.4rem;
+    color: #134953f0; /* turquoise dark */
+    text-align: left;
+    margin-top: 60px;
+}
+h3 {
+    font-size: 1.4rem;
+    color: #134953f0; /* turquoise dark */
+    text-align: left;
+    margin-top: 60px;
+}
+
+
+
+
+/* CV Lists + Sections */
+.section {
+    background: rgba(254, 245, 245, 0.6);
+    background-image: radial-gradient(to bottom, rgba(254, 245, 245, 0.6), #f0bd9d);
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 12px 20px;       /* REDUCED: First number (12px) fixes the top/bottom empty space */
+    text-align: left;
+    border-radius: 20px;
+    border-left: 6px solid #a77ec6; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    font-size: 0.95rem;       /* SMALLER: Makes text slightly smaller */
+    line-height: 1.3;         /* TIGHTER: Reduces the gap between lines of text */
+}
+
+.section-2 {
+    background: rgba(238, 232, 231, 0.509);
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 12px 20px;       /* REDUCED: Matches section for consistency */
+    text-align: left;
+    border-radius: 20px;
+    border-left: 6px solid #d6c0e7; 
+    box-shadow: 0 5px 15px rgba(0,0.07,0.07,0.07);
+    font-size: 0.95rem;       /* SMALLER: Matches section */
+    line-height: 1.4;         /* TIGHTER: Matches section */
+}
+
+.section-3 {
+    background: rgba(254, 245, 245, 0.6);
+    background-image: radial-gradient(to bottom, rgba(237, 212, 209, 0.629), #9f5d41);
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 13px 20px;       /* REDUCED: First number (13px) fixes the top/bottom empty space */
+    text-align: left;
+    border-radius: 20px;
+    border-left: 6px solid #a77ec6; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    font-size: 0.97rem;       /* SMALLER: Makes text slightly smaller */
+    line-height: 1.75;         /* TIGHTER: Reduces the gap between lines of text */
+}
+
+/* This targets lists in BOTH section and section-2 */
+.section li, .section-2 li {
+    padding: 5px 0;           /* REDUCED: Changes 10px to 5px to stop lists from feeling "blown out" */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #333;
+}
+
+.section li:last-child, .section-2 li:last-child, section-3 li:last-child {
+    border-bottom: none;
+}
+
+/* CV sections top-space fixed: remove default top spacing from headings inside sections */
+.section h1, .section h2, .section h3, .blog-post h1, .blog-post h2, .blog-post h3,
+.section-2 h1, .section-2 h2, .section-3 h2, .section-2 h3, .blog-date p {
+    margin-top: 10px;           /* reduces the empty space at the very top */
+    padding-top: 0;          /* Ensures NO extra padding is sneaking in */
+    margin-bottom: 10px;     /* keeps a small, clean gap, before the text starts */
+}
+
+/* Professional Buttons */
+.btn-primary {
+    background-color: #00acc1; /* turquoise */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 172, 193, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgb(255, 255, 255);
+}
+.profile-pic {
+    width: 140px;           /* fixed size */
+    height: 140px;          /* keep height + width the same for a perfect circle */
+    flex-shrink: 0;          /* CRITICAL: Stops the image from becoming an oval/squashed */
+    object-fit: cover;      /* prevents the image from stretching */
+    border-radius: 50%;     /* makes the image a perfect neat circle! */
+    border: 2.5px solid #ac6648;
+    margin-left: auto;  /*  shoves pic Bild to the right */
+    align-self: flex-start;  /* Klebt das Bild oben fest */
+}
+
+
+
+
+.profile-container {
+    display: flex;
+    flex-direction: row;     /* Ensures side-by-side layout */
+    align-items: flex-start; /* Aligns image to the top */
+    gap: 30px;               /* Space between image and text */
+    width: 100%;             /* Prevents the container from breaking the card */
+}
+
+
+.profile-text {
+    flex: 1;                 /* Tells the text to take up the remaining space */
+    min-width: 0;            /* Prevents the text from pushing the box wider than the screen */
+}
+
+/* The Main Card Container */
+.cv-card {
+    background-color: rgba(251, 214, 202, 0.756);
+    background-image: radial-gradient(to bottom, #e7c5be, #f59e79);
+    width: 90%;           /* Takes up 80% of the screen width */
+    max-width: 1300px;    /* But stops growing once it hits 1300px */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(8, 8, 8, 0.367);
+    text-align: left;
+}
+
+/*  Main Name */
+.cv-card h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: 'Arial', sans-serif; /*classic! */
+    margin-bottom: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* Subheaders (Education, Skills, etc etc.) */
+.cv-card h3 {
+    font-family: 'Trebuchet MS', sans-serif; /* modern, clean sans-serif font */
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* The Lists */
+.cv-card ul {
+    padding-left: 20px; /* + space for the bullets */
+}
+
+/* Targets ONLY the list items inside the nested list */
+.cv-card ul ul li {
+    font-size: 0.7rem;      /*  +sub-points slightly smaller */
+    color: #776f6f;            /* + sub-points a lighter grey */
+    font-style: italic;     /* +sub-points italic, for visual contrast */
+    margin-bottom: 4px;
+    scroll-margin-left: 4px;
+}
+.cv-card li {
+    font-family: 'Verdana', sans-serif; /* readable font for lists! */
+    font-size: 0.9rem;
+    color: #1e1313;
+    margin-bottom: 8px;
+}
+
+.tiny-text {
+    font-size: 17px; /* use px for exact size or 0.7rem for relative size */
+    color: #544848;     /* Optional: making it lighter often helps small text look better-not a must */
+}
+/*BLOG */
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background-color: rgb(229, 196, 196);
+    background-image: radial-gradient(to bottom, #aa5d4e, #e3c58e);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(10, 6, 6, 0.316);
+    margin-bottom: 30px;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: rgb(73, 72, 72);
+    margin-bottom: 10px;
+    text-align: right
+}
+.blog-date p, blog-post h2 {
+    margin-top: 1px;           /* reduces the empty space at the very top */
+    padding-top: 0;          /* Ensures NO extra padding is sneaking in */
+    margin-bottom: 10px;     /* keeps a small, clean gap, before the text starts */
+}
+/* CV uses section and cv-card multiple times and references image */
+
+
+/* ============================================================
+   ABOUT ME – Foto neben der Überschrift, Text ohne Abstand
+   ============================================================ */
+
+/* Zeile: Überschrift links, Foto rechts */
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  margin-top: -30px;           /* <- HIER: Zeile nach oben ziehen */
+}
+
+
+.about-header h2 {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+}
+
+/* Größeres, abgerundet-rechteckiges Porträt */
+.profile-pic {
+  display: block;
+  flex: 0 0 auto;
+  width: 160px;              /* war ~280px im Kreis → jetzt größer */
+  height: 180px;             /* Hochformat statt Quadrat */
+  object-fit: cover;         /* schneidet zu, verzerrt nicht */
+  border-radius: 70px;       /* Rechteck mit runden Ecken statt Kreis */
+  border: 2px solid #c1694f;
+  margin: 0;                 /* kein Abstand zum Text darunter */
+}
+
+/* Text sitzt direkt unter dem Foto */
+.my-card .about-text {
+  margin: 0;                 /* schlägt .hero-section p {margin-bottom:10px} */
+  padding: 0;
+  text-align: left;
+  line-height: 1.6;
+}

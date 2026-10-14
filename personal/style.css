@@ -1,0 +1,209 @@
+.bodystart {
+    background-color: #f5d9bddc;
+    color: #030303;
+    background: linear-gradient(135deg, #f8c0b6dc 0%, #f8d7bb 70%, #f6e7ba 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    background-color: #bdf5e3dc;
+    color: #030303;
+        /* because we want a bright, professional, soft gradient */
+    background: linear-gradient(135deg, #bdf5e3dc 0%, #c5e9f9 50%, #babbf6 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+/* The Navbar Container */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;/* logo on left, links on tzhe right */
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #50312c;;
+    backdrop-filter: blur(10px);
+    position: sticky;/* Keep menu at top when scroll */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-logo {
+    font-family: 'Georgia', serif;
+    color: #a49b9b;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Homebar, the Links-List */
+.nav-links {
+    list-style: none; /* Removes the bullet points */
+    display: flex;    /* Makes the list horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Removes the underline */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s; /* Makes the hover color change smooth */
+}
+
+.nav-links a:hover {
+    color: #74c5aa; /* Changes color when mouse is over the link */
+}
+
+h1 {
+    color: #1c2f41;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #191717;
+}
+.my-card {
+    background-color: rgb(176, 241, 247);
+    background-image: linear-gradient(to bottom right, #f0f8ff, #e7ecee);
+    width: 300px;
+    
+    /* Padding: Space inside white box, text doesn't touch the edges */
+    padding: 20px; 
+    
+    /* Border: thin grey line with rounded corners */
+    border: 1px solid #a6a4cb; 
+    border-radius: 15px; 
+    
+    /* Margin: Space outside the box "to push it away from other things" */
+    margin: 50px; 
+    
+    /* Optional: add a soft highlight */
+    box-shadow: 0 4px 8px rgba(229, 180, 180, 0.771); 
+}
+
+.profile-pic {
+    width: 140px;           /* Set a fixed size */
+    height: 140px;          /* Keep height and width the same for a perfect circle */
+    object-fit: cover;      /* This prevents the image from stretching */
+    border-radius: 50%;     /* This makes the image a perfect circle */
+    border: 2.5px solid #b65538; 
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the image and adds space below it */
+}
+
+/* The Main Card Container */
+.cv-card {
+  /* ---- Pinned to the upper-left, but BELOW the navbar ---- */
+  position: fixed;
+  top: calc(var(--navbar-height, 72px) + 24px);  /* navbar height + breathing room */
+  left: 32px;
+
+  /* ---- Circle geometry (equal width/height is mandatory) ---- */
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: flex;
+  top: 24px;
+  left: 24px;
+
+  width: 280px;
+  padding: 24px 28px;
+
+  background-color: rgba(251, 217, 217, 0.82);
+  background-image: radial-gradient(circle at top left, #ba7466, #ffa967);
+  border-radius: 50px;
+  border-bottom-left-radius: 4px;   /* the "tail" corner */
+
+  box-shadow: 0 10px 30px rgba(8, 8, 8, 0.367);
+  text-align: left;
+}
+
+/*  Main Name */
+.cv-card h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif; /*classic */
+    margin-bottom: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+/* Subheaders (Education, Skills, etc.) */
+.cv-card h3 {
+    font-family: 'Trebuchet MS', sans-serif; /* modern, clean sans-serif font */
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* The Lists */
+.cv-card ul {
+    padding-left: 20px; /* Gives space for the bullets */
+}
+
+/* Targets ONLY the list items inside the nested list */
+.cv-card ul ul li {
+    font-size: 0.8rem;      /*  the sub-points slightly smaller */
+    color: #888;            /* + sub-points a lighter grey */
+    font-style: italic;     /* +sub-points italic, for visual contrast */
+    margin-bottom: 4px;
+}
+.cv-card li {
+    font-family: 'Verdana', sans-serif; /* readable font for lists */
+    font-size: 0.9rem;
+    color: #1e1313;
+    margin-bottom: 8px;
+}
+
+.tiny-text {
+    font-size: 10px; /* use px for exact size or 0.7rem for relative size */
+    color: #605454;     /* Optional: making it lighter often helps small text look better, not a must */
+}
+/*BLOG */
+.blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background-color: rgb(250, 198, 192);
+    background: linear-gradient(135deg, rgb(250, 198, 192) 0%, #fad4bf 50%, #f6dfba 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(10, 6, 6, 0.316);
+    margin-bottom: 30px;
+}
+
+.blog-date {
+    font-size: 0.8rem;
+    color: rgb(73, 72, 72);
+    margin-bottom: 10px;
+}
+/* CV uses section and cv-card multiple times and references image */
