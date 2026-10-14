@@ -389,6 +389,12 @@ h3 {
   text-align: left;
   line-height: 1.6;
 }
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
 footer p.tiny {
   font-size: 0.7rem;
   color: #aaa;
